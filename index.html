@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym-HomePagr</title>
+    <link rel="shortcut icon" href="GYM2.png">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600;700&family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet">
+    <style>
+        @media (min-width: 700px) {
+            body {
+                background-image: url('P3.jpg');
+                background-repeat: no-repeat;
+                padding: 0%;
+                font-family: 'Ubuntu', sans-serif;
+                margin: 0%;
+            }
+            .left {
+                /* border: 3px solid blue; */
+                width: 150px;
+                height: 100px;
+                position: absolute;
+                left: 33px;
+                top: 10px;
+            }
+            .left img {
+                filter: invert(100%);
+                width: 140px;
+                height: 75px;
+                /* border: 5px solid green; */
+            }
+            .left span {
+                font-size: 20px;
+                text-align: center;
+                color: rgb(148, 144, 144);
+                text-shadow: 10px 10px 15px rgb(255, 81, 0);
+                display: block;
+            }
+            .mid {
+                /* border: 3px solid rgb(0, 255, 13); */
+                display: block;
+                width: 500px;
+                height: 50px;
+                margin: 40px auto;
+            }
+            .mid ul li {
+                display: inline;
+                margin: 10px;
+                padding: 5px;
+            }
+            .mid ul li a {
+                font-family: 'Ubuntu', sans-serif;
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                text-shadow: 10px 10px 15px gray;
+            }
+            .mid ul li a:hover {
+                text-decoration: underline;
+                color: grey;
+            }
+            .right {
+                /* border: 3px solid rgb(255, 81, 0); */
+                /* border: 3px solid blue; */
+                width: 220px;
+                height: 40px;
+                position: absolute;
+                right: 33px;
+                top: 10px;
+            }
+            .right button {
+                margin: 9px;
+                color: white;
+                font-family: 'Ubuntu', sans-serif;
+                background-color: black;
+                border: 2px solid gray;
+                border-radius: 23px;
+                cursor: pointer;
+                font-weight: bold;
+                box-shadow: 5px 5px 45px gray;
+            }
+            .right button:hover {
+                color: gray;
+            }
+            .container {
+                border: 2px solid blue;
+                width: 420px;
+                height: 420px;
+                position: absolute;
+                left: 65px;
+                top: 25%;
+                border-radius: 23px;
+                box-shadow: 10px 10px 25px blue;
+            }
+            .container h2 {
+                color: white;
+                display: block;
+                margin: 30px 10px;
+                text-align: center;
+            }
+            .container input {
+                font-family: 'Ubuntu', sans-serif;
+                display: block;
+                margin: 20px auto;
+                width: 330px;
+                height: 40px;
+                border-radius: 23px;
+                text-align: center;
+                border: none;
+            }
+            .container input:hover {
+                background-color: rgb(235, 195, 195);
+            }
+            #Sub {
+                font-family: 'Ubuntu', sans-serif;
+                margin: 9px auto;
+                color: white;
+                background-color: black;
+                width: 330px;
+                display: block;
+                height: 40px;
+                border: 2px solid gray;
+                border-radius: 23px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            #Sub:hover {
+                color: gray;
+            }
+        }
+        
+        @media (max-width: 700px) {
+            body {
+                background-image: url('GY1.jpg');
+                background-repeat: no-repeat;
+                padding: 0%;
+                font-family: 'Ubuntu', sans-serif;
+                margin: 0%;
+            }
+            .left {
+                /* border: 3px solid blue; */
+                width: 75px;
+                height: 50px;
+                position: absolute;
+                left: 17px;
+                top: 5px;
+            }
+            .left img {
+                filter: invert(100%);
+                width: 70px;
+                height: 60px;
+                /* border: 5px solid green; */
+            }
+            .left span {
+                font-size: 15px;
+                text-align: center;
+                color: rgb(148, 144, 144);
+                text-shadow: 5px 5px 7.5px rgb(255, 81, 0);
+                display: none;
+            }
+            .mid {
+                /* border: 3px solid rgb(0, 255, 13); */
+                display: block;
+                width: 560px;
+                height: 25px;
+                margin: 40px auto;
+            }
+            .mid ul li {
+                display: inline-block;
+                margin: 15px 10px;
+                padding: 2.5px;
+            }
+            .mid ul li a {
+                font-family: 'Ubuntu', sans-serif;
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                text-shadow: 5px 5px 7.5px gray;
+            }
+            .mid ul li a:hover {
+                text-decoration: underline;
+                color: grey;
+            }
+            .right {
+                /* border: 3px solid rgb(255, 81, 0); */
+                /* border: 3px solid blue; */
+                width: 180px;
+                height: 20px;
+                position: fixed;
+                right: 5px;
+                top: 5px;
+            }
+            .right button {
+                margin: 4px;
+                color: white;
+                font-family: 'Ubuntu', sans-serif;
+                background-color: black;
+                border: 1px solid gray;
+                border-radius: 23px;
+                cursor: pointer;
+                font-weight: bold;
+                box-shadow: 5px 5px 45px gray;
+            }
+            .right button:hover {
+                color: gray;
+            }
+            .container {
+                border: 2px solid blue;
+                width: 380px;
+                height: 420px;
+                position: absolute;
+                left: 88px;
+                top: 32%;
+                border-radius: 23px;
+                box-shadow: 10px 10px 25px blue;
+                box-sizing: border-box;
+            }
+            .container h2 {
+                color: white;
+                display: block;
+                margin: 30px 10px;
+                text-align: center;
+            }
+            .container input {
+                font-family: 'Ubuntu', sans-serif;
+                display: block;
+                margin: 20px auto;
+                width: 330px;
+                height: 40px;
+                border-radius: 23px;
+                text-align: center;
+                border: none;
+            }
+            .container input:hover {
+                background-color: rgb(235, 195, 195);
+            }
+            #Sub {
+                font-family: 'Ubuntu', sans-serif;
+                margin: 9px auto;
+                color: white;
+                background-color: black;
+                width: 330px;
+                display: block;
+                height: 40px;
+                border: 2px solid gray;
+                border-radius: 23px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            #Sub:hover {
+                color: gray;
+            }
+        }
+    </style>
+</head>
+<header class="left">
+    <img src="GYM1.png" alt="GymLogo">
+    <span>AJ Fitness</span>
+</header>
+<div class="mid">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Fitness Calculator</a></li>
+        <li><a href="">Contact Us</a></li>
+    </ul>
+</div>
+<div class="right">
+    <button type="button">Call Us Now</button>
+    <button Type="button">Email us</button>
+</div>
+<div class="container">
+    <h2>Join the Best Gym of Lahore now</h2>
+    <input type="text" placeholder="Enter your Name">
+    <input type="text" placeholder="Enter your Age">
+    <input type="text" placeholder="Enter your Gender">
+    <input type="text" placeholder="Enter your Locality">
+    <button type="submit" id="Sub">Submit</button>
+</div>
+
+<body>
+
+</body>
+
+</html>
